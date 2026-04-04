@@ -1,0 +1,62 @@
+export const ROLES = [
+  {
+    id: 'student',
+    title: 'Student',
+    emoji: '🎓',
+    color: '#0077ff',
+    tagline: 'Learn. Practice. Level up.',
+    description:
+      'Students are enrolled in one course and progress through structured modules at their own pace with full support from the teaching team.',
+    capabilities: [
+      'Access course modules and 100+ structured lessons',
+      'Watch video lessons and view Gamma slide decks',
+      'Download PDF, Excel and PowerPoint resource files',
+      'Complete MCQ quizzes with speed scoring',
+      'Track progress on a personal dashboard',
+      'Raise queries to the teaching team from any lesson',
+      'Compete in live Gaming Arena contests',
+      'View personal leaderboard rank and contest results',
+    ],
+    dashboardPages: 'Course Library · Progress Tracker · Gaming Arena · Assignments · Support',
+  },
+  {
+    id: 'teacher',
+    title: 'Teacher',
+    emoji: '🧑‍🏫',
+    color: '#14733b',
+    tagline: 'Author. Guide. Improve.',
+    description:
+      'Teachers build and maintain lesson content, answer student queries, manage quiz questions, and monitor student engagement across their course.',
+    capabilities: [
+      'Draft and edit lesson content with AI assistance (Gemini)',
+      'Generate MCQ quiz questions via Google Gemini',
+      'Submit lesson change requests to admin for approval',
+      'Review and track approval request status',
+      'Respond to student queries from the Query Inbox',
+      'Monitor student activity and lesson engagement',
+      'Create and manage Gaming Arena quiz contests',
+      'Attach PDFs, Excel files and PPT to lessons',
+    ],
+    dashboardPages: 'Query Inbox · Lesson Draft · MCQ Draft · Approval Request · My Requests · Student Activity',
+  },
+  {
+    id: 'admin',
+    title: 'Admin',
+    emoji: '⚙️',
+    color: '#7c3aed',
+    tagline: 'Control. Review. Publish.',
+    description:
+      'Admins oversee the entire platform — managing users, approving lesson content, auditing MCQs, tracking student performance, and governing the Gaming Arena.',
+    capabilities: [
+      'Review and approve or reject teacher lesson change requests',
+      'Manage all user accounts (create, edit, archive)',
+      'Assign students to courses and manage enrollments',
+      'Audit all MCQ questions across every course',
+      'Monitor and oversee student query resolution',
+      'View completion activity across all students',
+      'Manage Gaming Arena contests and contest settings',
+      'Full visibility into platform-wide audit trail',
+    ],
+    dashboardPages: 'Overview · Approval Requests · User Records · Student Queries · MCQ Audit · Completion Activity',
+  },
+]
