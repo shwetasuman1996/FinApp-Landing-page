@@ -7,7 +7,7 @@ const STEPS = [
     icon: '👤',
     title: 'Sign Up',
     description:
-      'Create your account and get enrolled in your assigned course — Tally, Excel, or AI for Finance — by your administrator.',
+      'Create your account and pick your course — Tally Prime, Excel for Finance, or AI for Finance — and start learning right away.',
   },
   {
     number: '02',

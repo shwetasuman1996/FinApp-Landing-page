@@ -71,8 +71,8 @@ export default function Hero() {
             </div>
             <div className="flex items-center gap-6 text-blue-200 text-sm">
               <div className="flex items-center gap-1.5">
-                <span className="text-yellow-400">★★★★★</span>
-                <span>Structured curriculum</span>
+                <span className="text-teal-300">📅</span>
+                <span>New batch starting soon</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse inline-block" />
