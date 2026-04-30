@@ -3,11 +3,12 @@ import { useState, useEffect } from 'react'
 const FINAPP_URL = import.meta.env.VITE_APP_URL || 'https://finapp-1lpk.onrender.com'
 
 const navLinks = [
-  { label: 'Courses',      href: '#courses'      },
-  { label: 'Features',     href: '#features'     },
-  { label: 'How It Works', href: '#how-it-works' },
-  { label: 'Learning',     href: '#roles'        },
-  { label: 'Contact',      href: '#contact'      },
+  { label: 'Courses',   href: '#courses'   },
+  { label: 'Pricing',   href: '#pricing'   },
+  { label: 'Learning',  href: '#roles'     },
+  { label: 'About',     href: '#about'     },
+  { label: 'FAQ',       href: '#faq'       },
+  { label: 'Contact',   href: '#contact'   },
 ]
 
 export default function Navbar() {
