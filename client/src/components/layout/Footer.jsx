@@ -1,4 +1,4 @@
-const FINAPP_URL = 'http://192.168.0.85:5174'
+const FINAPP_URL = import.meta.env.VITE_APP_URL || '#contact'
 
 export default function Footer() {
   return (
@@ -11,7 +11,7 @@ export default function Footer() {
               <span className="text-brand-bright">Fin</span>App
             </div>
             <p className="text-blue-200 text-sm leading-relaxed mb-4">
-              Professional Learning Management System for finance and accounting education.
+              Structured finance education — online and offline, all in one platform.
             </p>
             <p className="text-blue-300 text-xs">
               Master Tally · Excel · AI for Finance
@@ -37,11 +37,10 @@ export default function Footer() {
             <h4 className="font-semibold text-sm uppercase tracking-wider text-blue-300 mb-4">Platform</h4>
             <ul className="space-y-2">
               {[
-                { label: 'Features',      href: '#features'     },
-                { label: 'How It Works',  href: '#how-it-works' },
-                { label: 'Student Role',  href: '#roles'        },
-                { label: 'Teacher Role',  href: '#roles'        },
-                { label: 'Admin Role',    href: '#roles'        },
+                { label: 'Features',           href: '#features'     },
+                { label: 'How It Works',       href: '#how-it-works' },
+                { label: 'Online & Offline',   href: '#roles'        },
+                { label: 'Enquiry',            href: '#contact'      },
               ].map(item => (
                 <li key={item.label}>
                   <a href={item.href} className="text-blue-100 hover:text-white text-sm transition-colors">
@@ -68,7 +67,7 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#contact" className="text-blue-100 hover:text-white text-sm transition-colors">
-                  Request a Demo
+                  Enquiry
                 </a>
               </li>
             </ul>
@@ -83,7 +82,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-blue-800 pt-6 text-center text-blue-400 text-xs">
-          © {new Date().getFullYear()} FinApp. Professional Learning Management System for Finance Education.
+          © {new Date().getFullYear()} FinApp. Structured Finance Education — Online & Offline.
         </div>
       </div>
     </footer>

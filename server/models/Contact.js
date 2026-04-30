@@ -14,10 +14,10 @@ const contactSchema = new mongoose.Schema({
     lowercase: true,
     match: [/^\S+@\S+\.\S+$/, 'Please enter a valid email'],
   },
-  role: {
+  course: {
     type: String,
-    required: [true, 'Role is required'],
-    enum: ['Student', 'Teacher / Trainer', 'Institution / Admin', 'Just Exploring'],
+    required: [true, 'Course is required'],
+    enum: ['Tally Prime', 'Excel for Finance', 'AI for Finance', 'Not sure yet'],
   },
   message: {
     type: String,

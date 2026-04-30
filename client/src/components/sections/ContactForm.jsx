@@ -2,10 +2,10 @@ import { useState } from 'react'
 import SectionHeading from '../ui/SectionHeading'
 import AnimatedSection from '../ui/AnimatedSection'
 
-const ROLES = ['Student', 'Teacher / Trainer', 'Institution / Admin', 'Just Exploring']
+const COURSES = ['Tally Prime', 'Excel for Finance', 'AI for Finance', 'Not sure yet']
 
 export default function ContactForm() {
-  const [form, setForm]     = useState({ name: '', email: '', role: '', message: '' })
+  const [form, setForm]     = useState({ name: '', email: '', course: '', message: '' })
   const [status, setStatus] = useState('idle') // idle | loading | success | error
   const [errMsg, setErrMsg] = useState('')
 
@@ -25,7 +25,7 @@ export default function ContactForm() {
       const data = await res.json()
       if (data.success) {
         setStatus('success')
-        setForm({ name: '', email: '', role: '', message: '' })
+        setForm({ name: '', email: '', course: '', message: '' })
       } else {
         setStatus('error')
         setErrMsg(data.error || 'Something went wrong. Please try again.')
@@ -41,9 +41,9 @@ export default function ContactForm() {
       <div className="max-w-3xl mx-auto px-5">
         <AnimatedSection>
           <SectionHeading
-            kicker="Get in touch"
-            heading="Request a Demo or Ask a Question"
-            subtext="Interested in FinApp for your team or institution? We'd love to hear from you."
+            kicker="Enquiry"
+            heading="Interested in Joining FinApp?"
+            subtext="Have a question about a course or want to know more? Fill in the form and we'll get back to you."
           />
         </AnimatedSection>
 
@@ -51,15 +51,15 @@ export default function ContactForm() {
           {status === 'success' ? (
             <div className="text-center py-16 px-8 bg-green-50 rounded-2xl border border-green-200">
               <div className="text-5xl mb-4">✅</div>
-              <h3 className="font-display font-bold text-green-700 text-xl mb-2">Message sent!</h3>
+              <h3 className="font-display font-bold text-green-700 text-xl mb-2">Enquiry received!</h3>
               <p className="text-green-600 text-sm">
-                Thanks for reaching out. We'll get back to you soon.
+                Thanks for reaching out. We'll get back to you shortly.
               </p>
               <button
                 onClick={() => setStatus('idle')}
                 className="mt-5 text-sm font-medium text-green-700 underline"
               >
-                Send another message
+                Send another enquiry
               </button>
             </div>
           ) : (
@@ -95,28 +95,28 @@ export default function ContactForm() {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-slate-600 mb-1.5">I am a… *</label>
+                <label className="block text-xs font-semibold text-slate-600 mb-1.5">Interested Course *</label>
                 <select
-                  name="role"
-                  value={form.role}
+                  name="course"
+                  value={form.course}
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-bright/30 focus:border-brand-bright transition-all bg-white"
                 >
-                  <option value="">Select your role</option>
-                  {ROLES.map(r => <option key={r} value={r}>{r}</option>)}
+                  <option value="">Select a course</option>
+                  {COURSES.map(c => <option key={c} value={c}>{c}</option>)}
                 </select>
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-slate-600 mb-1.5">Message *</label>
+                <label className="block text-xs font-semibold text-slate-600 mb-1.5">Your Message *</label>
                 <textarea
                   name="message"
                   value={form.message}
                   onChange={handleChange}
                   required
                   rows={5}
-                  placeholder="Tell us what you're looking for — a demo, enrollment info, institution pricing, etc."
+                  placeholder="Ask us anything — course details, fees, batch timings, or anything else on your mind."
                   className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-700 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-bright/30 focus:border-brand-bright transition-all resize-none"
                 />
               </div>
@@ -133,7 +133,7 @@ export default function ContactForm() {
                 className="w-full py-3 rounded-xl text-white font-semibold text-sm transition-all hover:opacity-90 disabled:opacity-60"
                 style={{ background: 'linear-gradient(120deg,#0077ff,#19b5b2)' }}
               >
-                {status === 'loading' ? 'Sending…' : 'Send Message →'}
+                {status === 'loading' ? 'Sending…' : 'Submit Enquiry →'}
               </button>
             </form>
           )}
