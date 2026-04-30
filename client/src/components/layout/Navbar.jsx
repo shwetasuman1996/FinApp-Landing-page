@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const FINAPP_URL = import.meta.env.VITE_APP_URL || '#contact'
+const FINAPP_URL = import.meta.env.VITE_APP_URL || 'https://finapp-1lpk.onrender.com'
 
 const navLinks = [
   { label: 'Courses',      href: '#courses'      },
