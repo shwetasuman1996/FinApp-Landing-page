@@ -4,7 +4,7 @@ import Badge from '../ui/Badge'
 import SectionHeading from '../ui/SectionHeading'
 import AnimatedSection from '../ui/AnimatedSection'
 
-const FINAPP_URL = 'http://192.168.0.85:5174'
+const FINAPP_URL = import.meta.env.VITE_APP_URL || 'https://finapp-1lpk.onrender.com'
 
 const badgeVariantMap = { blue: 'blue', green: 'green', purple: 'purple' }
 const courseVariants = ['blue', 'green', 'purple']

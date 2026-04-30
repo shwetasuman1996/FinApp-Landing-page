@@ -1,4 +1,4 @@
-const FINAPP_URL = 'http://192.168.0.85:5174'
+const FINAPP_URL = import.meta.env.VITE_APP_URL || 'https://finapp-1lpk.onrender.com'
 
 export default function CTA() {
   return (

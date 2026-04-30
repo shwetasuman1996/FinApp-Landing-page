@@ -49,7 +49,7 @@ export default function Hero() {
             </h1>
             <p className="text-blue-100 text-lg leading-relaxed mb-8 max-w-lg">
               FinApp is a structured Learning Management System built for finance and accounting professionals.
-              100+ lessons, live quiz contests, AI-generated content, and full progress tracking — all in one platform.
+              100+ lessons, live quiz contests, AI-powered tools training, and full progress tracking — all in one platform.
             </p>
             <div className="flex flex-wrap gap-4 mb-10">
               <a

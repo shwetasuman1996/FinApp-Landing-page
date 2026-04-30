@@ -37,14 +37,14 @@ export const FEATURES = [
   },
   {
     icon: '🛡️',
-    title: 'Secure Role-Based Access',
+    title: 'Secure & Private Access',
     description:
-      'JWT authentication with three distinct roles — Student, Teacher, Admin. Each role sees only what they need.',
+      'Your account and progress data are protected with JWT authentication. Only you can see your learning history.',
   },
   {
     icon: '📁',
-    title: 'Lesson File Resources',
+    title: 'Downloadable Resources',
     description:
-      'Attach PDFs, Excel workbooks, and PowerPoint files to any lesson. Resources stored securely via Supabase.',
+      'Every lesson comes with PDFs, Excel workbooks, and PowerPoint files to download and study offline at your own pace.',
   },
 ]
