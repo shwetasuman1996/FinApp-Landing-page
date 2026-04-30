@@ -12,12 +12,6 @@ export const FEATURES = [
       'Every lesson includes YouTube video embeds, Gamma slide decks, downloadable PDF resources, and animated concept visuals.',
   },
   {
-    icon: '🤖',
-    title: 'AI-Generated Content',
-    description:
-      'Teachers draft lessons with Google Gemini AI assistance. Smart prompting generates a full structured lesson in seconds.',
-  },
-  {
     icon: '✅',
     title: 'Approval Workflow',
     description:
