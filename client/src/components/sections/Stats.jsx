@@ -3,8 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 const STATS = [
   { value: 100, suffix: '+', label: 'Lessons',  color: 'text-brand-bright' },
   { value: 3,   suffix: '',  label: 'Courses',   color: 'text-brand-teal'  },
-  { value: 3,   suffix: '',  label: 'User Roles', color: 'text-purple-600' },
-  { value: 48,  suffix: '+', label: 'Modules',   color: 'text-green-700'  },
+{ value: 48,  suffix: '+', label: 'Modules',   color: 'text-green-700'  },
 ]
 
 function CountUp({ target, suffix }) {
@@ -44,7 +43,7 @@ export default function Stats() {
   return (
     <section className="py-14 bg-white border-b border-slate-100">
       <div className="max-w-5xl mx-auto px-5">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-3 gap-8">
           {STATS.map(stat => (
             <div key={stat.label} className="text-center">
               <p className={`font-display text-5xl font-extrabold mb-1 ${stat.color}`}>

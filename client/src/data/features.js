@@ -12,12 +12,6 @@ export const FEATURES = [
       'Every lesson includes YouTube video embeds, Gamma slide decks, downloadable PDF resources, and animated concept visuals.',
   },
   {
-    icon: '✅',
-    title: 'Approval Workflow',
-    description:
-      'Teacher lesson drafts flow through an admin approval gate before publishing. Quality is verified at every step.',
-  },
-  {
     icon: '⚡',
     title: 'Quiz System with Speed Bonuses',
     description:

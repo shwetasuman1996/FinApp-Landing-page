@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const FINAPP_URL = 'http://192.168.0.85:5174'
+const FINAPP_URL = import.meta.env.VITE_APP_URL || '#contact'
 
 const navLinks = [
   { label: 'Courses',      href: '#courses'      },
@@ -37,9 +37,6 @@ export default function Navbar() {
             <span className="text-brand-bright">Fin</span>
             <span className={scrolled ? 'text-brand-navy' : 'text-white'}>App</span>
           </span>
-          <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${
-            scrolled ? 'bg-blue-50 text-brand-blue' : 'bg-white/15 text-white'
-          }`}>LMS</span>
         </a>
 
         {/* Desktop nav */}
