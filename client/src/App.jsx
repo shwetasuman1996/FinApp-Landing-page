@@ -7,7 +7,6 @@ import HowItWorks from './components/sections/HowItWorks'
 import Features from './components/sections/Features'
 import Roles from './components/sections/Roles'
 import Gamification from './components/sections/Gamification'
-import Testimonials from './components/sections/Testimonials'
 import ContactForm from './components/sections/ContactForm'
 import CTA from './components/sections/CTA'
 
@@ -23,7 +22,6 @@ export default function App() {
         <Features />
         <Roles />
         <Gamification />
-        <Testimonials />
         <ContactForm />
         <CTA />
       </main>
