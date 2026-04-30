@@ -6,6 +6,8 @@ services:
     rootDir: server
     buildCommand: npm install
     startCommand: node index.js
+    autoDeploy: true
+    branch: main
     envVars:
       - key: NODE_ENV
         value: production
@@ -21,6 +23,8 @@ services:
     rootDir: client
     buildCommand: npm install && npm run build
     staticPublishPath: dist
+    autoDeploy: true
+    branch: main
     envVars:
       - key: VITE_API_URL
         sync: false   # Set to your finapp-api Render URL, e.g. https://finapp-api.onrender.com
