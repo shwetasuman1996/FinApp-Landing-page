@@ -9,7 +9,7 @@ export const FEATURES = [
     icon: '▶️',
     title: 'Rich Lesson Content',
     description:
-      'Every lesson includes YouTube video embeds, Gamma slide decks, downloadable PDF resources, and animated concept visuals.',
+      'Every lesson includes YouTube video embeds, downloadable PDF resources, and animated concept visuals.',
   },
   {
     icon: '⚡',

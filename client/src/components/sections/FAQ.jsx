@@ -17,7 +17,7 @@ const FAQS = [
   },
   {
     q: 'What is included in the course fee?',
-    a: 'The one-time fee covers full access to all lessons, video content, Gamma slide decks, downloadable PDFs and Excel files, MCQ quizzes, Gaming Arena contests, and student query support.',
+    a: 'The one-time fee covers full access to all lessons, video content, downloadable PDFs and Excel files, MCQ quizzes, Gaming Arena contests, and student query support.',
   },
   {
     q: 'Will I get a certificate after completing the course?',

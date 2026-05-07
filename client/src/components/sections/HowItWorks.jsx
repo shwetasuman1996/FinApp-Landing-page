@@ -21,7 +21,7 @@ const STEPS = [
     icon: '📚',
     title: 'Learn Every Lesson',
     description:
-      'Watch YouTube video lessons, view Gamma slide decks, read downloadable PDFs, and study Lottie-animated concept visuals.',
+      'Watch YouTube video lessons, read downloadable PDFs, and study animated concept visuals.',
   },
   {
     number: '04',

@@ -10,7 +10,7 @@ const BLENDED_FEATURES = [
   {
     icon: '📱',
     title: 'Reinforce Online — Anytime',
-    description: 'After every class, log in to FinApp and revisit the same topics through video lessons, Gamma slide decks, and downloadable resources at your own pace.',
+    description: 'After every class, log in to FinApp and revisit the same topics through video lessons and downloadable resources at your own pace.',
   },
   {
     icon: '✍️',

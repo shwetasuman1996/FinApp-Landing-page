@@ -9,7 +9,7 @@ export const ROLES = [
       'Students are enrolled in one course and progress through structured modules at their own pace with full support from the teaching team.',
     capabilities: [
       'Access course modules and 100+ structured lessons',
-      'Watch video lessons and view Gamma slide decks',
+      'Watch video lessons and access downloadable resources',
       'Download PDF, Excel and PowerPoint resource files',
       'Complete MCQ quizzes with speed scoring',
       'Track progress on a personal dashboard',
