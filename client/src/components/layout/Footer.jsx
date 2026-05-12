@@ -37,7 +37,6 @@ export default function Footer() {
             <h4 className="font-semibold text-sm uppercase tracking-wider text-blue-300 mb-4">Platform</h4>
             <ul className="space-y-2">
               {[
-                { label: 'Pricing',            href: '#pricing'      },
                 { label: 'How It Works',       href: '#how-it-works' },
                 { label: 'Online & Offline',   href: '#roles'        },
                 { label: 'About FinApp',        href: '#about'        },
