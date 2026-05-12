@@ -21,7 +21,7 @@ const FAQS = [
   },
   {
     q: 'Will I get a certificate after completing the course?',
-    a: 'Yes. Students who complete all modules and quizzes receive a course completion certificate from FinApp / PTCA.',
+    a: 'Yes. Students who complete all modules and quizzes receive a course completion certificate from FinApp.',
   },
   {
     q: 'How do I enrol?',

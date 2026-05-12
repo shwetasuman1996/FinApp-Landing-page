@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-brand-navy text-white pt-14 pb-8">
       <div className="max-w-6xl mx-auto px-5">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           {/* Brand */}
           <div>
             <div className="font-display font-bold text-2xl mb-3">
@@ -40,7 +40,7 @@ export default function Footer() {
                 { label: 'Pricing',            href: '#pricing'      },
                 { label: 'How It Works',       href: '#how-it-works' },
                 { label: 'Online & Offline',   href: '#roles'        },
-                { label: 'About PTCA',         href: '#about'        },
+                { label: 'About FinApp',        href: '#about'        },
                 { label: 'FAQ',                href: '#faq'          },
                 { label: 'Enquiry',            href: '#contact'      },
               ].map(item => (
@@ -50,6 +50,36 @@ export default function Footer() {
                   </a>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="font-semibold text-sm uppercase tracking-wider text-blue-300 mb-4">Contact Us</h4>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-2 text-blue-100 text-sm">
+                <span>📍</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=41+3rd+Main+AECS+Layout+Sanjaynagar+Bengaluru+560094"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors leading-snug"
+                >
+                  41, 3rd Main, AECS Layout,<br />Sanjaynagar, Bengaluru – 560 094
+                </a>
+              </li>
+              <li className="flex items-center gap-2 text-blue-100 text-sm">
+                <span>📞</span>
+                <a href="tel:+919591341000" className="hover:text-white transition-colors">
+                  +91 95913 41000
+                </a>
+              </li>
+              <li className="flex items-center gap-2 text-blue-100 text-sm">
+                <span>✉️</span>
+                <a href="mailto:balaji@ptca.in" className="hover:text-white transition-colors">
+                  balaji@ptca.in
+                </a>
+              </li>
             </ul>
           </div>
 
