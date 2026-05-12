@@ -102,7 +102,7 @@ export default function Hero() {
                 {/* Mock course progress */}
                 <div className="space-y-4 mb-6">
                   {[
-                    { course: 'Tally Prime',      progress: 72, color: '#0077ff' },
+                    { course: 'Tally',             progress: 72, color: '#0077ff' },
                     { course: 'Excel for Finance', progress: 45, color: '#14733b' },
                   ].map(item => (
                     <div key={item.course}>

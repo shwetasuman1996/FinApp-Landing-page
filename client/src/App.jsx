@@ -1,10 +1,10 @@
+import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import WhatsAppButton from './components/ui/WhatsAppButton'
 import Hero from './components/sections/Hero'
 import Stats from './components/sections/Stats'
 import Courses from './components/sections/Courses'
-import Pricing from './components/sections/Pricing'
 import HowItWorks from './components/sections/HowItWorks'
 import Features from './components/sections/Features'
 import Roles from './components/sections/Roles'
@@ -13,8 +13,9 @@ import About from './components/sections/About'
 import FAQ from './components/sections/FAQ'
 import ContactForm from './components/sections/ContactForm'
 import CTA from './components/sections/CTA'
+import CoursePage from './pages/CoursePage'
 
-export default function App() {
+function LandingPage() {
   return (
     <>
       <Navbar />
@@ -22,7 +23,6 @@ export default function App() {
         <Hero />
         <Stats />
         <Courses />
-        <Pricing />
         <HowItWorks />
         <Features />
         <Roles />
@@ -35,5 +35,14 @@ export default function App() {
       <Footer />
       <WhatsAppButton />
     </>
+  )
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/courses/:id" element={<CoursePage />} />
+    </Routes>
   )
 }

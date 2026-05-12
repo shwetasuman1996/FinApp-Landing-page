@@ -2,10 +2,54 @@ import SectionHeading from '../ui/SectionHeading'
 import AnimatedSection from '../ui/AnimatedSection'
 
 const STATS = [
-  { value: '40+', label: 'Years of Experience' },
-  { value: '6',   label: 'Chartered Accountants' },
+  { value: '5',   label: 'Industrial Expert Chartered Accountants' },
+  { value: '3',   label: 'Courses Available' },
   { value: '30+', label: 'Finance Professionals' },
 ]
+
+const PARTNERS = [
+  {
+    name: 'S. Thiagarajan',
+    designation: 'Chartered Accountant',
+    age: 64,
+    qualification: 'B.Com, LLB, FCA, DISA (ICAI)',
+    experience: '42 Years',
+    specialization: 'Specializes in audit — handles all major audits of the firm including Special Audits for Income-Tax Department, C&AG, and Bank Branch Audits.',
+  },
+  {
+    name: 'Balaji S',
+    designation: 'Chartered Accountant',
+    age: 33,
+    qualification: 'B.Com, FCA, CMA',
+    experience: '12 Years',
+    specialization: 'Earlier worked with Larsen & Toubro in Internal Audit. Specializes in Internal Audit with focus on Garment & Infrastructure industries, Statutory Compliance, Special Audit for Income-Tax Department, and other statutory audits.',
+  },
+  {
+    name: 'Vighnesh CN',
+    designation: 'Chartered Accountant',
+    age: 30,
+    qualification: 'B.Com, LLB, FCA',
+    experience: '7 Years',
+    specialization: 'Certified Forensic Auditor from ICAI.',
+  },
+  {
+    name: 'Pavan Kumar',
+    designation: 'Chartered Accountant',
+    age: 30,
+    qualification: 'B.Com, ACA, ACMA',
+    experience: '4 Years',
+    specialization: null,
+  },
+  {
+    name: 'Mithun Raj',
+    designation: 'Chartered Accountant',
+    age: 30,
+    qualification: 'B.Com, ACA',
+    experience: '4 Years',
+    specialization: null,
+  },
+]
+
 
 export default function About() {
   return (
@@ -14,8 +58,8 @@ export default function About() {
         <AnimatedSection>
           <SectionHeading
             kicker="Who we are"
-            heading="Backed by 40 Years of Finance Expertise"
-            subtext="FinApp is built by PTCA — Prakash & Thiagarajan Chartered Accountants — a trusted CA firm based in Bengaluru since 1984."
+            heading="About FinApp"
+            subtext="FinApp is a professional finance education platform — built and led by qualified Chartered Accountants, designed to equip learners with the real tools used in the industry."
           />
         </AnimatedSection>
 
@@ -30,35 +74,19 @@ export default function About() {
                 🏛️
               </div>
               <h3 className="font-display text-2xl font-bold text-brand-navy mb-4">
-                Prakash & Thiagarajan<br />
-                <span className="text-brand-bright">Chartered Accountants</span>
+                FinApp<br />
+                <span className="text-brand-bright">Finance Education Platform</span>
               </h3>
               <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                Founded in 1984 by Mr. Prakash Singh and Mr. Thiagarajan S., PTCA has spent four decades
-                serving corporate clients across India in auditing, GST compliance, direct taxes, and financial advisory.
+                FinApp is a structured finance education platform built by practising Chartered Accountants
+                based in Bengaluru. We train students and working professionals in the tools that matter most
+                on the job — Tally, Excel, and AI.
               </p>
               <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                FinApp is our initiative to bridge the gap between classroom finance education and the tools
-                professionals actually use on the job — Tally, Excel, and AI. Trained by real CA practitioners,
-                not just instructors.
+                Our courses are designed and delivered by real CA professionals — not just instructors —
+                bridging the gap between classroom theory and what employers actually expect on day one.
               </p>
 
-              <div className="flex items-start gap-2 text-sm text-slate-500 mb-3">
-                <span className="text-brand-bright mt-0.5">📍</span>
-                <span>41, 3rd Main, AECS Layout, Sanjaynagar, Bengaluru – 560 094</span>
-              </div>
-              <div className="flex items-start gap-2 text-sm text-slate-500 mb-3">
-                <span className="text-brand-bright mt-0.5">📞</span>
-                <a href="tel:+919591341000" className="hover:text-brand-bright transition-colors">
-                  +91 95913 41000
-                </a>
-              </div>
-              <div className="flex items-start gap-2 text-sm text-slate-500">
-                <span className="text-brand-bright mt-0.5">✉️</span>
-                <a href="mailto:balaji@ptca.in" className="hover:text-brand-bright transition-colors">
-                  balaji@ptca.in
-                </a>
-              </div>
             </div>
 
             {/* Right — stats */}
@@ -79,10 +107,48 @@ export default function About() {
               >
                 <p className="text-xs font-bold uppercase tracking-widest text-teal-300 mb-2">Our mission</p>
                 <p className="text-sm leading-relaxed text-blue-100">
-                  "We aim to deliver excellence in finance education — combining 40 years of CA expertise
+                  "We aim to deliver excellence in finance education — combining deep CA expertise
                   with modern digital learning tools."
                 </p>
               </div>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        {/* Partners */}
+        <AnimatedSection delay={0.2}>
+          <div className="mt-16">
+            <h3 className="font-display text-xl font-bold text-brand-navy mb-8 text-center">
+              Meet Our <span className="text-brand-bright">Experts</span>
+            </h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {PARTNERS.map(p => (
+                <div
+                  key={p.name}
+                  className="bg-white rounded-2xl p-6 shadow-card border border-slate-100 flex flex-col gap-3"
+                >
+                  <div
+                    className="w-10 h-10 rounded-xl flex items-center justify-center text-lg"
+                    style={{ background: '#0077ff15' }}
+                  >
+                    👤
+                  </div>
+                  <div>
+                    <p className="font-display font-bold text-brand-navy text-base">{p.name}</p>
+                    <p className="text-brand-bright text-xs font-semibold uppercase tracking-wide">{p.designation}</p>
+                  </div>
+                  <div className="text-xs text-slate-500 space-y-1">
+                    <p><span className="font-semibold text-slate-600">Age:</span> {p.age} Years</p>
+                    <p><span className="font-semibold text-slate-600">Qualification:</span> {p.qualification}</p>
+                    <p><span className="font-semibold text-slate-600">Experience:</span> {p.experience}</p>
+                  </div>
+                  {p.specialization && (
+                    <p className="text-xs text-slate-500 leading-relaxed border-t border-slate-100 pt-3">
+                      {p.specialization}
+                    </p>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         </AnimatedSection>

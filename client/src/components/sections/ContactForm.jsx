@@ -2,7 +2,7 @@ import { useState } from 'react'
 import SectionHeading from '../ui/SectionHeading'
 import AnimatedSection from '../ui/AnimatedSection'
 
-const COURSES = ['Tally Prime', 'Excel for Finance', 'AI for Finance', 'Not sure yet']
+const COURSES = ['Tally', 'Excel for Finance', 'Zoho Books', 'AI in Finance', 'Income Tax & GST', 'Not sure yet']
 
 export default function ContactForm() {
   const [form, setForm]     = useState({ name: '', email: '', course: '', message: '' })
@@ -42,8 +42,8 @@ export default function ContactForm() {
         <AnimatedSection>
           <SectionHeading
             kicker="Enquiry"
-            heading="Interested in Joining FinApp?"
-            subtext="Have a question about a course or want to know more? Fill in the form and we'll get back to you."
+            heading="Have a Question?"
+            subtext="Ask us anything — about courses, fees, batch timings, the learning process, or anything else on your mind."
           />
         </AnimatedSection>
 
