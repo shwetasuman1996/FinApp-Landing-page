@@ -5,7 +5,7 @@ import AnimatedSection from '../ui/AnimatedSection'
 const FAQS = [
   {
     q: 'Do I need any prior knowledge to join?',
-    a: 'No prior knowledge is required for Tally Prime or Excel for Finance — they start from the basics. For AI for Finance, basic computer familiarity is helpful but not mandatory.',
+    a: 'No prior knowledge is required for Tally or Excel for Finance — they start from the basics. For AI for Finance, basic computer familiarity is helpful but not mandatory.',
   },
   {
     q: 'Is this online, offline, or both?',
@@ -13,7 +13,7 @@ const FAQS = [
   },
   {
     q: 'How long does each course take to complete?',
-    a: 'Tally Prime is a 6-week program. Excel for Finance and AI for Finance are each 4-week programs. Lessons unlock sequentially so you stay on track week by week.',
+    a: 'Tally is a 6-week program. Excel for Finance and AI for Finance are each 4-week programs. Lessons unlock sequentially so you stay on track week by week.',
   },
   {
     q: 'What is included in the course fee?',

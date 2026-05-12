@@ -2,7 +2,7 @@ import SectionHeading from '../ui/SectionHeading'
 import AnimatedSection from '../ui/AnimatedSection'
 
 const STATS = [
-  { value: '5',   label: 'Partner Chartered Accountants' },
+  { value: '5',   label: 'Industrial Expert Chartered Accountants' },
   { value: '3',   label: 'Courses Available' },
   { value: '30+', label: 'Finance Professionals' },
 ]
@@ -10,7 +10,7 @@ const STATS = [
 const PARTNERS = [
   {
     name: 'S. Thiagarajan',
-    designation: 'Partner',
+    designation: 'Chartered Accountant',
     age: 64,
     qualification: 'B.Com, LLB, FCA, DISA (ICAI)',
     experience: '42 Years',
@@ -18,31 +18,31 @@ const PARTNERS = [
   },
   {
     name: 'Balaji S',
-    designation: 'Partner',
+    designation: 'Chartered Accountant',
     age: 33,
     qualification: 'B.Com, FCA, CMA',
     experience: '12 Years',
     specialization: 'Earlier worked with Larsen & Toubro in Internal Audit. Specializes in Internal Audit with focus on Garment & Infrastructure industries, Statutory Compliance, Special Audit for Income-Tax Department, and other statutory audits.',
   },
   {
-    name: 'CA Vighnesh',
-    designation: 'Partner',
+    name: 'Vighnesh CN',
+    designation: 'Chartered Accountant',
     age: 30,
     qualification: 'B.Com, LLB, FCA',
     experience: '7 Years',
     specialization: 'Certified Forensic Auditor from ICAI.',
   },
   {
-    name: 'CA Pavan',
-    designation: 'Partner',
+    name: 'Pavan Kumar',
+    designation: 'Chartered Accountant',
     age: 30,
     qualification: 'B.Com, ACA, ACMA',
     experience: '4 Years',
     specialization: null,
   },
   {
-    name: 'CA Mithun',
-    designation: 'Partner',
+    name: 'Mithun Raj',
+    designation: 'Chartered Accountant',
     age: 30,
     qualification: 'B.Com, ACA',
     experience: '4 Years',
@@ -119,7 +119,7 @@ export default function About() {
         <AnimatedSection delay={0.2}>
           <div className="mt-16">
             <h3 className="font-display text-xl font-bold text-brand-navy mb-8 text-center">
-              Meet Our <span className="text-brand-bright">Partners</span>
+              Meet Our <span className="text-brand-bright">Experts</span>
             </h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {PARTNERS.map(p => (

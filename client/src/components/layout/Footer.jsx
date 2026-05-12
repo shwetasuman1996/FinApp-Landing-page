@@ -22,7 +22,7 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-sm uppercase tracking-wider text-blue-300 mb-4">Programs</h4>
             <ul className="space-y-2">
-              {['Tally Prime', 'Excel for Finance', 'AI for Finance'].map(c => (
+              {['Tally', 'Excel for Finance', 'AI for Finance'].map(c => (
                 <li key={c}>
                   <a href="#courses" className="text-blue-100 hover:text-white text-sm transition-colors">
                     {c}
@@ -70,14 +70,14 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2 text-blue-100 text-sm">
                 <span>📞</span>
-                <a href="tel:+919591341000" className="hover:text-white transition-colors">
-                  +91 95913 41000
+                <a href="tel:+919880694123" className="hover:text-white transition-colors">
+                  +91 9880694123
                 </a>
               </li>
               <li className="flex items-center gap-2 text-blue-100 text-sm">
                 <span>✉️</span>
-                <a href="mailto:balaji@ptca.in" className="hover:text-white transition-colors">
-                  balaji@ptca.in
+                <a href="mailto:FinApp@gmail.com" className="hover:text-white transition-colors">
+                  FinApp@gmail.com
                 </a>
               </li>
             </ul>

@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = '919591341000'
+const WHATSAPP_NUMBER = '919880694123'
 const WHATSAPP_MESSAGE = 'Hi! I\'m interested in learning more about FinApp courses.'
 
 export default function WhatsAppButton() {
