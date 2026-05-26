@@ -75,8 +75,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2 text-blue-100 text-sm">
                 <span>✉️</span>
-                <a href="mailto:FinApp@gmail.com" className="hover:text-white transition-colors">
-                  FinApp@gmail.com
+                <a href="mailto:finappacademy@gmail.com" className="hover:text-white transition-colors">
+                  finappacademy@gmail.com
                 </a>
               </li>
             </ul>
