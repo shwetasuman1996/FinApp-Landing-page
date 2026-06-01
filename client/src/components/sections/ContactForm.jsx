@@ -4,6 +4,15 @@ import AnimatedSection from '../ui/AnimatedSection'
 
 const COURSES = ['Tally', 'Excel for Finance', 'Zoho Books', 'AI in Finance', 'Income Tax & GST', 'Not sure yet']
 
+const FORM_NAME = 'enquiry'
+
+// Netlify Forms expects an application/x-www-form-urlencoded POST to "/"
+// with a `form-name` field that matches the static form in index.html.
+const encode = data =>
+  Object.keys(data)
+    .map(k => encodeURIComponent(k) + '=' + encodeURIComponent(data[k]))
+    .join('&')
+
 export default function ContactForm() {
   const [form, setForm]     = useState({ name: '', email: '', phone: '', course: '', message: '' })
   const [status, setStatus] = useState('idle') // idle | loading | success | error
@@ -16,23 +25,21 @@ export default function ContactForm() {
     setStatus('loading')
     setErrMsg('')
     try {
-      const API = import.meta.env.VITE_API_URL || ''
-      const res = await fetch(`${API}/api/contact`, {
+      const res = await fetch('/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({ 'form-name': FORM_NAME, 'bot-field': '', ...form }),
       })
-      const data = await res.json()
-      if (data.success) {
+      if (res.ok) {
         setStatus('success')
         setForm({ name: '', email: '', phone: '', course: '', message: '' })
       } else {
         setStatus('error')
-        setErrMsg(data.error || 'Something went wrong. Please try again.')
+        setErrMsg('Something went wrong submitting your enquiry. Please try again.')
       }
     } catch {
       setStatus('error')
-      setErrMsg('Could not connect to the server. Please try again later.')
+      setErrMsg('Could not submit your enquiry. Please check your connection and try again.')
     }
   }
 
@@ -64,9 +71,20 @@ export default function ContactForm() {
             </div>
           ) : (
             <form
+              name={FORM_NAME}
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
               onSubmit={handleSubmit}
               className="bg-white rounded-2xl shadow-card border border-slate-100 p-8 space-y-5"
             >
+              {/* Netlify form-name marker — must be inside the form */}
+              <input type="hidden" name="form-name" value={FORM_NAME} />
+              {/* Honeypot: bots that fill every field will get caught here */}
+              <p className="hidden">
+                <label>Don't fill this out: <input name="bot-field" /></label>
+              </p>
+
               <div className="grid sm:grid-cols-2 gap-5">
                 <div>
                   <label className="block text-xs font-semibold text-slate-600 mb-1.5">Full Name *</label>

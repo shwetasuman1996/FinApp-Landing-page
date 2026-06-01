@@ -1,0 +1,16 @@
+# Used when you eventually connect the GitHub repo to Netlify for
+# automatic builds. Manual drag-and-drop uploads from client/dist
+# continue to work without this file — but with it, every git push
+# will trigger a fresh deploy.
+
+[build]
+  base    = "client"
+  command = "npm run build"
+  publish = "dist"
+
+# Vite SPA fallback — every unknown path serves index.html so the
+# client-side router can handle it.
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200

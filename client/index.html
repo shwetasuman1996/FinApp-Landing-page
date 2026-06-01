@@ -9,6 +9,20 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <!--
+      Hidden static form so Netlify's build-time bot detects the form
+      schema (the React form below posts to "/" with the same fields).
+      Do not remove. https://docs.netlify.com/forms/setup/
+    -->
+    <form name="enquiry" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="course" />
+      <textarea name="message"></textarea>
+    </form>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
