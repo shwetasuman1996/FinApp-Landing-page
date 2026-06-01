@@ -5,7 +5,7 @@ import AnimatedSection from '../ui/AnimatedSection'
 const COURSES = ['Tally', 'Excel for Finance', 'Zoho Books', 'AI in Finance', 'Income Tax & GST', 'Not sure yet']
 
 export default function ContactForm() {
-  const [form, setForm]     = useState({ name: '', email: '', course: '', message: '' })
+  const [form, setForm]     = useState({ name: '', email: '', phone: '', course: '', message: '' })
   const [status, setStatus] = useState('idle') // idle | loading | success | error
   const [errMsg, setErrMsg] = useState('')
 
@@ -25,7 +25,7 @@ export default function ContactForm() {
       const data = await res.json()
       if (data.success) {
         setStatus('success')
-        setForm({ name: '', email: '', course: '', message: '' })
+        setForm({ name: '', email: '', phone: '', course: '', message: '' })
       } else {
         setStatus('error')
         setErrMsg(data.error || 'Something went wrong. Please try again.')
@@ -92,6 +92,21 @@ export default function ContactForm() {
                     className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-700 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-bright/30 focus:border-brand-bright transition-all"
                   />
                 </div>
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold text-slate-600 mb-1.5">Phone Number *</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={form.phone}
+                  onChange={handleChange}
+                  required
+                  inputMode="tel"
+                  pattern="[0-9+\-\s()]{7,20}"
+                  placeholder="+91 98800 12345"
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-700 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-bright/30 focus:border-brand-bright transition-all"
+                />
               </div>
 
               <div>

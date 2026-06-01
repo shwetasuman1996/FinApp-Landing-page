@@ -6,6 +6,7 @@ services:
     rootDir: server
     buildCommand: npm install
     startCommand: node index.js
+    healthCheckPath: /api/health
     autoDeploy: true
     branch: main
     envVars:
@@ -13,8 +14,21 @@ services:
         value: production
       - key: PORT
         value: 10000
+      - key: CLIENT_URL
+        value: https://finapp.in.net
+      - key: ENQUIRY_TO
+        value: finappacademy@gmail.com
+      - key: SMTP_SERVICE
+        value: gmail
+      - key: SMTP_FROM
+        value: FinApp Website <finappacademy@gmail.com>
+      # --- Secrets — fill in via the Render dashboard ---
       - key: MONGODB_URI
-        sync: false   # Set this in the Render dashboard
+        sync: false
+      - key: SMTP_USER
+        sync: false   # finappacademy@gmail.com
+      - key: SMTP_PASS
+        sync: false   # Gmail App Password (Google Account → Security → App passwords)
 
   # Frontend (React/Vite — Static Site)
   - type: web

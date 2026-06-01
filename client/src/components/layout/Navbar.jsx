@@ -56,19 +56,19 @@ export default function Navbar() {
         {/* CTA */}
         <div className="hidden md:flex items-center gap-3">
           <a
-            href={`${FINAPP_URL}/`}
+            href="#contact"
             className={`text-sm font-medium transition-colors ${
               scrolled ? 'text-slate-600 hover:text-brand-bright' : 'text-white/80 hover:text-white'
             }`}
           >
-            Log In
+            Enquire Now
           </a>
           <a
-            href={`${FINAPP_URL}/signup`}
+            href={`${FINAPP_URL}/`}
             className="text-sm font-semibold px-4 py-2 rounded-lg text-white"
             style={{ background: 'linear-gradient(120deg,#0077ff,#19b5b2)' }}
           >
-            Get Started
+            Log In
           </a>
         </div>
 
@@ -104,15 +104,15 @@ export default function Navbar() {
             </a>
           ))}
           <div className="pt-3 border-t border-slate-100 flex flex-col gap-2">
-            <a href={`${FINAPP_URL}/`} className="text-sm font-medium text-slate-600 hover:text-brand-bright">
-              Log In
+            <a href="#contact" onClick={closeMenu} className="text-sm font-medium text-slate-600 hover:text-brand-bright">
+              Enquire Now
             </a>
             <a
-              href={`${FINAPP_URL}/signup`}
+              href={`${FINAPP_URL}/`}
               className="text-sm font-semibold px-4 py-2 rounded-lg text-white text-center"
               style={{ background: 'linear-gradient(120deg,#0077ff,#19b5b2)' }}
             >
-              Get Started Free
+              Log In
             </a>
           </div>
         </div>

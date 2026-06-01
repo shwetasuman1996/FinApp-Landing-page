@@ -5,7 +5,7 @@ import AnimatedSection from '../ui/AnimatedSection'
 const FAQS = [
   {
     q: 'Do I need any prior knowledge to join?',
-    a: 'No prior knowledge is required for Tally or Excel for Finance — they start from the basics. For AI for Finance, basic computer familiarity is helpful but not mandatory.',
+    a: 'Basics of accounting are mandatory before you join — every course at FinApp builds on core accounting concepts. For AI for Finance, basic computer familiarity is also helpful.',
   },
   {
     q: 'Is this online, offline, or both?',
@@ -25,7 +25,7 @@ const FAQS = [
   },
   {
     q: 'How do I enrol?',
-    a: 'Click "Get Started Free" to create your account, or fill out the Enquiry form and our team will reach out to you with batch details and enrollment steps.',
+    a: 'Fill out the Enquiry form and our team will reach out to you with batch details and enrollment steps. Your FinApp account is then created and shared with you by our team.',
   },
 ]
 

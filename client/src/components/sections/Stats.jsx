@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 
 const STATS = [
   { value: 100, suffix: '+', label: 'Lessons',  color: 'text-brand-bright' },
-  { value: 3,   suffix: '',  label: 'Courses',   color: 'text-brand-teal'  },
+  { value: 5,   suffix: '',  label: 'Courses',   color: 'text-brand-teal'  },
 { value: 48,  suffix: '+', label: 'Modules',   color: 'text-green-700'  },
 ]
 

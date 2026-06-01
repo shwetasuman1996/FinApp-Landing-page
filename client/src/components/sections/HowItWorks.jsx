@@ -4,10 +4,10 @@ import AnimatedSection from '../ui/AnimatedSection'
 const STEPS = [
   {
     number: '01',
-    icon: '👤',
-    title: 'Sign Up',
+    icon: '📝',
+    title: 'Submit an Enquiry',
     description:
-      'Create your account and pick your course — Tally, Excel for Finance, or AI for Finance — and start learning right away.',
+      'Fill out the enquiry form with your course of interest. Our team gets in touch, sets up your FinApp account, and shares your login.',
   },
   {
     number: '02',

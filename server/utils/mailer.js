@@ -20,7 +20,7 @@ function getTransporter() {
   return cachedTransporter;
 }
 
-async function sendEnquiryEmail({ name, email, course, message }) {
+async function sendEnquiryEmail({ name, email, phone, course, message }) {
   const transporter = getTransporter();
   if (!transporter) {
     console.warn('SMTP not configured — skipping enquiry email. Set SMTP_USER and SMTP_PASS.');
@@ -35,6 +35,7 @@ async function sendEnquiryEmail({ name, email, course, message }) {
     `You have a new enquiry from the FinApp website.\n\n` +
     `Name:    ${name}\n` +
     `Email:   ${email}\n` +
+    `Phone:   ${phone}\n` +
     `Course:  ${course}\n\n` +
     `Message:\n${message}\n`;
 
@@ -44,6 +45,7 @@ async function sendEnquiryEmail({ name, email, course, message }) {
       <table style="width:100%;border-collapse:collapse;font-size:14px;">
         <tr><td style="padding:6px 0;font-weight:bold;width:120px;">Name</td><td>${escapeHtml(name)}</td></tr>
         <tr><td style="padding:6px 0;font-weight:bold;">Email</td><td>${escapeHtml(email)}</td></tr>
+        <tr><td style="padding:6px 0;font-weight:bold;">Phone</td><td>${escapeHtml(phone)}</td></tr>
         <tr><td style="padding:6px 0;font-weight:bold;">Course</td><td>${escapeHtml(course)}</td></tr>
       </table>
       <h3 style="margin:20px 0 8px;font-size:15px;">Message</h3>

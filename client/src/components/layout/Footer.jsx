@@ -22,7 +22,7 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-sm uppercase tracking-wider text-blue-300 mb-4">Programs</h4>
             <ul className="space-y-2">
-              {['Tally', 'Excel for Finance', 'AI for Finance'].map(c => (
+              {['Tally', 'Excel for Finance', 'Zoho Books', 'AI in Finance', 'Income Tax & GST'].map(c => (
                 <li key={c}>
                   <a href="#courses" className="text-blue-100 hover:text-white text-sm transition-colors">
                     {c}
@@ -87,8 +87,8 @@ export default function Footer() {
             <h4 className="font-semibold text-sm uppercase tracking-wider text-blue-300 mb-4">Get Started</h4>
             <ul className="space-y-2 mb-5">
               <li>
-                <a href={`${FINAPP_URL}/signup`} className="text-blue-100 hover:text-white text-sm transition-colors">
-                  Create Account
+                <a href="#contact" className="text-blue-100 hover:text-white text-sm transition-colors">
+                  Submit Enquiry
                 </a>
               </li>
               <li>
@@ -96,18 +96,13 @@ export default function Footer() {
                   Log In
                 </a>
               </li>
-              <li>
-                <a href="#contact" className="text-blue-100 hover:text-white text-sm transition-colors">
-                  Enquiry
-                </a>
-              </li>
             </ul>
             <a
-              href={`${FINAPP_URL}/signup`}
+              href="#contact"
               className="inline-block text-sm font-semibold px-4 py-2 rounded-lg text-white"
               style={{ background: 'linear-gradient(120deg,#0077ff,#19b5b2)' }}
             >
-              Get Started Free →
+              Enquire Now →
             </a>
           </div>
         </div>

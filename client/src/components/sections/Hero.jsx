@@ -53,11 +53,11 @@ export default function Hero() {
             </p>
             <div className="flex flex-wrap gap-4 mb-10">
               <a
-                href={`${FINAPP_URL}/signup`}
+                href="#contact"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white text-sm shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
                 style={{ background: 'linear-gradient(120deg,#0077ff,#19b5b2)' }}
               >
-                Get Started Free
+                Enquire Now
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -76,7 +76,7 @@ export default function Hero() {
               </div>
               <div className="flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse inline-block" />
-                <span>3 courses available</span>
+                <span>5 courses available</span>
               </div>
             </div>
           </div>

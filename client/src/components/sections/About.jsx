@@ -2,8 +2,8 @@ import SectionHeading from '../ui/SectionHeading'
 import AnimatedSection from '../ui/AnimatedSection'
 
 const STATS = [
-  { value: '5',   label: 'Industrial Expert Chartered Accountants' },
-  { value: '3',   label: 'Courses Available' },
+  { value: '5',   label: 'Expert Mentors' },
+  { value: '5',   label: 'Courses Available' },
   { value: '30+', label: 'Finance Professionals' },
 ]
 
@@ -39,8 +39,8 @@ export default function About() {
                 on the job — Tally, Excel, and AI.
               </p>
               <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                Our courses are designed and delivered by real CA professionals — not just instructors —
-                bridging the gap between classroom theory and what employers actually expect on day one.
+                Our courses are designed and delivered by industry experts — bridging the gap between
+                classroom theory and what employers actually expect on day one.
               </p>
 
             </div>

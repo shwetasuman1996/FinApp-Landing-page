@@ -14,10 +14,23 @@ const contactSchema = new mongoose.Schema({
     lowercase: true,
     match: [/^\S+@\S+\.\S+$/, 'Please enter a valid email'],
   },
+  phone: {
+    type: String,
+    required: [true, 'Phone number is required'],
+    trim: true,
+    match: [/^[0-9+\-\s()]{7,20}$/, 'Please enter a valid phone number'],
+  },
   course: {
     type: String,
     required: [true, 'Course is required'],
-    enum: ['Tally Prime', 'Excel for Finance', 'AI for Finance', 'Not sure yet'],
+    enum: [
+      'Tally',
+      'Excel for Finance',
+      'Zoho Books',
+      'AI in Finance',
+      'Income Tax & GST',
+      'Not sure yet',
+    ],
   },
   message: {
     type: String,
