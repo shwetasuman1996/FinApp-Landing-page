@@ -7,50 +7,6 @@ const STATS = [
   { value: '30+', label: 'Finance Professionals' },
 ]
 
-const PARTNERS = [
-  {
-    name: 'S. Thiagarajan',
-    designation: 'Chartered Accountant',
-    age: 64,
-    qualification: 'B.Com, LLB, FCA, DISA (ICAI)',
-    experience: '42 Years',
-    specialization: 'Specializes in audit — handles all major audits of the firm including Special Audits for Income-Tax Department, C&AG, and Bank Branch Audits.',
-  },
-  {
-    name: 'Balaji S',
-    designation: 'Chartered Accountant',
-    age: 33,
-    qualification: 'B.Com, FCA, CMA',
-    experience: '12 Years',
-    specialization: 'Earlier worked with Larsen & Toubro in Internal Audit. Specializes in Internal Audit with focus on Garment & Infrastructure industries, Statutory Compliance, Special Audit for Income-Tax Department, and other statutory audits.',
-  },
-  {
-    name: 'Vighnesh CN',
-    designation: 'Chartered Accountant',
-    age: 30,
-    qualification: 'B.Com, LLB, FCA',
-    experience: '7 Years',
-    specialization: 'Certified Forensic Auditor from ICAI.',
-  },
-  {
-    name: 'Pavan Kumar',
-    designation: 'Chartered Accountant',
-    age: 30,
-    qualification: 'B.Com, ACA, ACMA',
-    experience: '4 Years',
-    specialization: null,
-  },
-  {
-    name: 'Mithun Raj',
-    designation: 'Chartered Accountant',
-    age: 30,
-    qualification: 'B.Com, ACA',
-    experience: '4 Years',
-    specialization: null,
-  },
-]
-
-
 export default function About() {
   return (
     <section id="about" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50/40">
@@ -115,43 +71,6 @@ export default function About() {
           </div>
         </AnimatedSection>
 
-        {/* Partners */}
-        <AnimatedSection delay={0.2}>
-          <div className="mt-16">
-            <h3 className="font-display text-xl font-bold text-brand-navy mb-8 text-center">
-              Meet Our <span className="text-brand-bright">Experts</span>
-            </h3>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {PARTNERS.map(p => (
-                <div
-                  key={p.name}
-                  className="bg-white rounded-2xl p-6 shadow-card border border-slate-100 flex flex-col gap-3"
-                >
-                  <div
-                    className="w-10 h-10 rounded-xl flex items-center justify-center text-lg"
-                    style={{ background: '#0077ff15' }}
-                  >
-                    👤
-                  </div>
-                  <div>
-                    <p className="font-display font-bold text-brand-navy text-base">{p.name}</p>
-                    <p className="text-brand-bright text-xs font-semibold uppercase tracking-wide">{p.designation}</p>
-                  </div>
-                  <div className="text-xs text-slate-500 space-y-1">
-                    <p><span className="font-semibold text-slate-600">Age:</span> {p.age} Years</p>
-                    <p><span className="font-semibold text-slate-600">Qualification:</span> {p.qualification}</p>
-                    <p><span className="font-semibold text-slate-600">Experience:</span> {p.experience}</p>
-                  </div>
-                  {p.specialization && (
-                    <p className="text-xs text-slate-500 leading-relaxed border-t border-slate-100 pt-3">
-                      {p.specialization}
-                    </p>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </AnimatedSection>
       </div>
     </section>
   )

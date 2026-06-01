@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Contact = require('../models/Contact');
+const { sendEnquiryEmail } = require('../utils/mailer');
 
 // POST /api/contact — save a new contact/demo request
 router.post('/', async (req, res) => {
@@ -12,6 +13,13 @@ router.post('/', async (req, res) => {
 
   try {
     const contact = await Contact.create({ name, email, course, message });
+
+    // Fire-and-forget email notification to FinApp inbox.
+    // Logged but never blocks/aborts a successful submission.
+    sendEnquiryEmail({ name, email, course, message }).catch(err => {
+      console.error('Enquiry email failed:', err.message);
+    });
+
     res.status(201).json({ success: true, id: contact._id });
   } catch (err) {
     if (err.name === 'ValidationError') {
